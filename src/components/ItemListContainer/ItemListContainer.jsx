@@ -1,10 +1,14 @@
+import "./ItemListContainer.css"
 
+// eslint-disable-next-line react/prop-types
 function ItemListContainer({ greeting }) {
     
   
       return (
         <>
-    <h1>{greeting}</h1>
+        <section>
+    <h1 className="titulo">{greeting}</h1>
+        </section>
         </>
       )
     }
