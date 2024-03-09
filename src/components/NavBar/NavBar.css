@@ -1,34 +1,11 @@
 .nav {
     background-color: peru;
-    display: flex;
-    justify-content: space-around
-}
-
-;
-
-.enlacesContenedor ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-}
-
-.enlaceMenu {
-    text-decoration: none;
-    display: inline-flex;
-    margin: 20px;
-}
-
-.enlaceMenu a {
-    text-decoration: none;
-    display: inline;
-    color: white;
-    text-transform: uppercase;
 }
 
 .contenedorCarrito {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
     color: white;
     text-decoration: none;
 }
