@@ -4,21 +4,27 @@ const productos = [
         name: "Café Colombia",
         description: "Cuarto de café extraido de Colombia, de tostado intenso.",
         price: 14000,
+
         img: "public/Static/Images/cafe-colombia-prueba.jpg",
+
     },
     {
         id: 2,
         name: "Café Perú",
         description: "Cuarto de café extraido de Perú, de tostado medio.",
         price: 13000,
+
         img: "public/Static/Images/cafe-colombia-prueba.jpg",
+
     },
     {
         id: 3,
         name: "Café Costa Rica",
         description: "Cuarto de café extraido de Costa Rica, de tostado suave.",
         price: 17000,
+
         img: "public/Static/Images/cafe-colombia-prueba.jpg",
+
     },
 ];
 
