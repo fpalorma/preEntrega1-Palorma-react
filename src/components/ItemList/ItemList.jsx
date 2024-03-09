@@ -15,7 +15,7 @@ function ItemList() {
   return (
     <>
       <div className="itemsContainer">
-        <Item producto={products}></Item>
+      {products.map((producto) => <Item key={producto.id} producto={producto}></Item>)}
       </div>
     </>
   );
