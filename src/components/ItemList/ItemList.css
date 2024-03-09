@@ -1,0 +1,9 @@
+.itemsContainer {
+    display: flex;
+    gap: 20px;
+    margin-inline: 50px;
+    margin-block: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}

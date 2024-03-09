@@ -1,30 +1,40 @@
-import "./NavBar.css"
-import CartWidget from "../CartWidget/CartWidget.jsx"
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-function NavBar() {
+import "./NavBar.css";
+import CartWidget from "../CartWidget/CartWidget.jsx";
+
+export default function NavBar() {
   const estilos = {
     color: "white",
-    fontFamily: "arial",
-    fontSize: "1.5rem",
-    marginBlock:"auto"
-  }
-
-
-    return (
-      <nav className="nav">
-        <h3 style={estilos}>miCafé</h3>
-        <div className="enlacesContenedor">
-            <ul>
-                <li className="enlaceMenu"><a href="#Home">Home</a></li>
-                <li className="enlaceMenu"><a href="#Nosotros">Nosotros</a></li>
-                <li className="enlaceMenu"><a href="#Contacto">Contacto</a></li>
-            </ul>
-        </div>
+  };
+  return (
+    <Navbar expand="lg" className={("bg-body-tertiary", "nav")}>
+      <Container>
+        <Navbar.Brand href="#home" style={estilos}>
+          mi-Café
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" style={estilos}>
+              Home
+            </Nav.Link>
+            <Nav.Link href="#Productos" style={estilos}>
+              Productos
+            </Nav.Link>
+            <Nav.Link href="#Contacto" style={estilos}>
+              Contacto
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
         <div className="contenedorCarrito">
-            <CartWidget />
+          <CartWidget />
         </div>
-      </ nav>
-    )
-  }
-  
-  export default NavBar
+      </Container>
+    </Navbar>
+  );
+}
+
+

@@ -1,0 +1,27 @@
+.item-count-container {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: baseline;
+
+}
+
+.item-count-container button {
+    border: none;
+    background-color: #4893d4;
+    width: 20px;
+    margin: 5px auto;
+
+}
+
+.contenedorGeneral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 5px;
+    margin-inline: auto
+}
+
+.btnAgregar {
+    margin-left: 5px;
+}

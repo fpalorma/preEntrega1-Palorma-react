@@ -1,17 +1,24 @@
-import "./ItemListContainer.css"
+import "./ItemListContainer.css";
+import ItemList from "../ItemList/ItemList.jsx";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer.jsx";
 
 // eslint-disable-next-line react/prop-types
 function ItemListContainer({ greeting }) {
-    
-  
-      return (
-        <>
+  return (
+    <>
+      <section>
+        <h1 className="titulo">{greeting}</h1>
+      </section>
+      <main >
         <section>
-    <h1 className="titulo">{greeting}</h1>
+          <ItemList></ItemList>
         </section>
-        </>
-      )
-    }
-    
-    
-    export default ItemListContainer
+        <section>
+          <ItemDetailContainer></ItemDetailContainer>
+        </section>
+      </main>
+    </>
+  );
+}
+
+export default ItemListContainer;
