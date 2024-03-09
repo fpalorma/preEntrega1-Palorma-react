@@ -2,10 +2,12 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function Item({ producto }) {
+function Item({  producto }) {
+
+  const { id, img, name, description, price } = producto
   return (
     <>
-      {producto.map(({ id, img, name, description, price }) => (
+      
         <Card style={{ width: "18rem" }} key={id}>
           <Card.Img variant="top" src={img} />
           <Card.Body>
@@ -17,7 +19,7 @@ function Item({ producto }) {
             <Button variant="primary">Ver detalle</Button>
           </Card.Body>
         </Card>
-      ))}
+      
     </>
   );
 }
