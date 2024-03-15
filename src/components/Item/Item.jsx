@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function Item({ producto }) {
   const { id, img, name, breve, price } = producto;
+
   return (
     <>
       <Card style={{ width: "18rem" }} key={id}>
@@ -19,7 +21,9 @@ function Item({ producto }) {
             Precio: ${price}
           </Card.Subtitle>
           <Card.Text>{breve}</Card.Text>
-          <Button variant="primary">Ver detalle</Button>
+          <Button as={Link} to={`/products/${id}`} variant="primary">
+            Ver detalle
+          </Button>
         </Card.Body>
       </Card>
     </>

@@ -8,7 +8,7 @@ export default function ItemDetail({ img, name, description, price }) {
   return (
     <>
       <Card style={{ width: "22rem" }}>
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" src={`../${img}`} alt={name} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>

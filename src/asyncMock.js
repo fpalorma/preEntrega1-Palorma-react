@@ -93,7 +93,7 @@ export function getProducts() {
 export function getProductDetail(id) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(productos.find(prod => prod.id === id))
+            resolve(productos.find(prod => prod.id == id))
         }, 200)
     })
 }
