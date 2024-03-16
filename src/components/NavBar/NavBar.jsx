@@ -1,6 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget.jsx";
@@ -8,25 +10,44 @@ import CartWidget from "../CartWidget/CartWidget.jsx";
 export default function NavBar() {
   const estilos = {
     color: "white",
+    textDecoration: "none",
   };
   return (
     <Navbar expand="lg" className={("bg-body-tertiary", "nav")}>
       <Container>
-        <Navbar.Brand href="#home" style={estilos}>
-          mi-Café
+        <Navbar.Brand style={estilos}>
+          <Link to={"/"} style={estilos}>
+            mi-Café
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" style={estilos}>
+            <Nav.Link as={Link} to={"/"} style={estilos}>
               Home
             </Nav.Link>
-            <Nav.Link href="#Productos" style={estilos}>
-              Productos
+            <Nav.Link as={Link} to={"/contact"} style={estilos}>
+              Contact
             </Nav.Link>
-            <Nav.Link href="#Contacto" style={estilos}>
-              Contacto
-            </Nav.Link>
+            <NavDropdown
+              title="Productos"
+              id="basic-nav-dropdown"
+              data-bs-theme="light"
+            >
+              <NavDropdown.Item as={Link} to={"/category/accesorio"}>
+                Accesorios
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/category/café"}>
+                Café
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/category/cafetera"}>
+                Cafeteras
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to={"/products"}>
+                Todos
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
         <div className="contenedorCarrito">
@@ -36,5 +57,3 @@ export default function NavBar() {
     </Navbar>
   );
 }
-
-

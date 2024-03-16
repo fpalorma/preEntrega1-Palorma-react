@@ -1,9 +1,9 @@
 import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList.jsx";
 
-
 // eslint-disable-next-line react/prop-types
 function ItemListContainer({ greeting }) {
+
   return (
     <>
       <section>
