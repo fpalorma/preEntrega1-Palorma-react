@@ -27,13 +27,17 @@ export default function NavBar() {
               Home
             </Nav.Link>
             <Nav.Link as={Link} to={"/contact"} style={estilos}>
-              Contact
+              Contacto
             </Nav.Link>
             <NavDropdown
               title="Productos"
               id="basic-nav-dropdown"
               data-bs-theme="light"
             >
+              <NavDropdown.Item as={Link} to={"/products"}>
+                Todos
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to={"/category/accesorio"}>
                 Accesorios
               </NavDropdown.Item>
@@ -43,17 +47,13 @@ export default function NavBar() {
               <NavDropdown.Item as={Link} to={"/category/cafetera"}>
                 Cafeteras
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to={"/products"}>
-                Todos
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <div className="contenedorCarrito">
-          <CartWidget />
-        </div>
       </Container>
+      <div className="contenedorCarrito">
+        <CartWidget />
+      </div>
     </Navbar>
   );
 }
