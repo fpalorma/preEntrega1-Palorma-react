@@ -7,7 +7,7 @@ import "./ItemDetail.css";
 export default function ItemDetail({ img, name, description, price }) {
   return (
     <>
-      <Card style={{ width: "22rem" }}>
+      <Card style={{ width: "22rem", marginTop: "20px" }}>
         <Card.Img variant="top" src={`../${img}`} alt={name} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
