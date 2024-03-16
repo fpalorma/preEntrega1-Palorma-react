@@ -97,4 +97,22 @@ export function getProductDetail(id) {
         }, 200)
     })
 }
+export function getProductsByCategory(category) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const filteredProducts = productos.filter((prod) => prod.category == category)
+            if (filteredProducts.length > 0) {
+                const modifiedProducts = filteredProducts.map(producto => {
+                    return {
+                        ...producto,
+                        img: `../${producto.img}`
+                    };
+                });
+                resolve(modifiedProducts)
+            }
+        })
+    }, 2000)
+
+
+}
 

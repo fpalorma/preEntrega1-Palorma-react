@@ -28,6 +28,11 @@ function App() {
             path="/products/:prodId"
             element={<ItemDetailContainer />}
           />
+          <Route
+            exact
+            path="category/:catName"
+            element={<ItemListContainer />}
+          />
         </Routes>
       </BrowserRouter>
     </>

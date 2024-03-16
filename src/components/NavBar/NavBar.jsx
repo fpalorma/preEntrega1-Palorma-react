@@ -34,9 +34,15 @@ export default function NavBar() {
               id="basic-nav-dropdown"
               data-bs-theme="light"
             >
-              <NavDropdown.Item href="#action/3.1">Accesorios</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Café</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Cafeteras</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/category/accesorio"}>
+                Accesorios
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/category/café"}>
+                Café
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/category/cafetera"}>
+                Cafeteras
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to={"/products"}>
                 Todos

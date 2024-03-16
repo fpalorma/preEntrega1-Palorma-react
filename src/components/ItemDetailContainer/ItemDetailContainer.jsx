@@ -13,7 +13,6 @@ export default function ItemDetailContainer() {
     getProductDetail(prodId)
       .then((res) => {
         setProduct(res);
-        console.log(res);
       })
       .catch((err) => console.log(err));
   }, [prodId]);
