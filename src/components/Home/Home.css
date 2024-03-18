@@ -1,13 +1,14 @@
 .carouselImg {
     width: 100vw;
-    max-height: auto;
-    filter: brightness(65%)
+    max-height: 89.7vh;
+    filter: brightness(65%);
+    object-fit: cover
 }
 
 @media (max-width:1500px) {
     .carouselImg {
 
-        height: 100vh;
+        min-height: 90vh;
         object-fit: cover
     }
 }
