@@ -6,7 +6,8 @@ const productos = [
         price: 14000,
         img: "img/cafe-colombia-prueba.jpg",
         category: "café",
-        breve: "Café molido o en grano de origen"
+        breve: "Café molido o en grano de origen",
+        stock: 6
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const productos = [
         price: 13000,
         img: "img/cafe-colombia-prueba.jpg",
         category: "café",
-        breve: "Café molido o en grano de origen"
+        breve: "Café molido o en grano de origen",
+        stock: 6
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const productos = [
         price: 17000,
         img: "img/cafe-colombia-prueba.jpg",
         category: "café",
-        breve: "Café molido o en grano de origen"
+        breve: "Café molido o en grano de origen",
+        stock: 6
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const productos = [
         price: 130000,
         img: "img/chemex.jpeg",
         category: "cafetera",
-        breve: "Cafetera moderna de vidrio"
+        breve: "Cafetera moderna de vidrio",
+        stock: 8
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const productos = [
         price: 92000,
         img: "img/moka.jpg",
         category: "cafetera",
-        breve: "Cafetera tradicional italiana"
+        breve: "Cafetera tradicional italiana",
+        stock: 4
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const productos = [
         price: 50000,
         img: "img/prensa-francesa.jpg",
         category: "cafetera",
-        breve: "Cafetera de émbolo"
+        breve: "Cafetera de émbolo",
+        stock: 8
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const productos = [
         price: 30000,
         img: "img/filtro.jpg",
         category: "accesorio",
-        breve: "Filtros de papel premium"
+        breve: "Filtros de papel premium",
+        stock: 12
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const productos = [
         price: 80000,
         img: "img/molino.jpg",
         category: "accesorio",
-        breve: "Molinillo manual de café"
+        breve: "Molinillo manual de café",
+        stock: 8
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const productos = [
         price: 200000,
         img: "img/tetera-barista.jpg",
         category: "accesorio",
-        breve: "Tetera con diseño 'pico de cisne'"
+        breve: "Tetera con diseño 'pico de cisne'",
+        stock: 3
     }
 ];
 
