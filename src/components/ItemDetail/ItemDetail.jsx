@@ -4,7 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 import "./ItemDetail.css";
 
-export default function ItemDetail({ img, name, description, price }) {
+export default function ItemDetail({ img, name, description, price, stock }) {
   return (
     <>
       <Card style={{ width: "22rem", marginTop: "20px" }}>
@@ -15,9 +15,10 @@ export default function ItemDetail({ img, name, description, price }) {
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item>Precio: ${price}</ListGroup.Item>
+          <ListGroup.Item>Stock disponible: {stock}</ListGroup.Item>
         </ListGroup>
         <div className="itemCountContainer">
-          <ItemCount />
+          <ItemCount stock={stock} />
         </div>
       </Card>
     </>

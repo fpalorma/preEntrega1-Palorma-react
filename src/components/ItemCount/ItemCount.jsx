@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./ItemCount.css";
 import Button from "react-bootstrap/Button";
 
-export default function ItemCount() {
+export default function ItemCount({ stock }) {
   let [cont, setCont] = useState(1);
 
-  const handleClickSuma = () => {
-    cont < 5 ? setCont(cont + 1) : alert("No hay stock");
+  const handleClickSuma = (stock) => {
+    cont < stock ? setCont(cont + 1) : setCont(stock);
   };
   const handleClickResta = () => {
-    cont > 1 ? setCont(cont - 1) : (cont = 0);
+    cont > 1 ? setCont(cont - 1) : (cont = 1);
   };
   const handleClickBtnAgregar = () => {
     if (cont > 1) {
@@ -26,7 +27,7 @@ export default function ItemCount() {
           <button onClick={handleClickResta}>-</button>
           <p>{cont}</p>
 
-          <button onClick={handleClickSuma}>+</button>
+          <button onClick={() => handleClickSuma(stock)}>+</button>
         </div>
         <Button
           variant="primary"
