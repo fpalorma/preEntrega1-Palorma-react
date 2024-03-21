@@ -2,5 +2,17 @@
 
     display: flex;
     gap: 10px;
-    align-items: baseline
+    align-items: baseline;
+
+}
+
+Card {
+    box-shadow: 10px 5px 5px black;
+}
+
+.contenedor-btns {
+    display: flex;
+    gap: 10px;
+    align-items: space-around;
+    margin: 10px auto
 }

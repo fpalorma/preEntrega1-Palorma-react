@@ -9,9 +9,18 @@
 .item-count-container button {
     border: none;
     background-color: #4893d4;
-    width: 20px;
+    width: 2rem;
+    height: auto;
     margin: 5px auto;
+    color: white
+}
 
+.item-count-container button:hover {
+    border: none;
+    background-color: #277ac2;
+    width: 2rem;
+    height: auto;
+    margin: 5px auto;
 }
 
 .contenedorGeneral {
