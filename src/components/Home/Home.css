@@ -1,6 +1,6 @@
 .carouselImg {
     width: 100vw;
-    max-height: 89.7vh;
+    height: 100vh;
     filter: brightness(65%);
     object-fit: cover
 }
