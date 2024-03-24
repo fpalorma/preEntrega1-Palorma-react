@@ -7,11 +7,12 @@ import "./ItemDetail.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function ItemDetail({ img, name, description, price, stock }) {
+export default function ItemDetail({ product }) {
   const [quantityAdded, setQuantity] = useState(0);
 
   const handleOnAdd = (quantity) => {
     setQuantity(quantity);
+    console.log({ ...product, quantity});
   };
 
   const handleOnCancelBtn = () => {
@@ -26,14 +27,14 @@ export default function ItemDetail({ img, name, description, price, stock }) {
           boxShadow: "10px 5px 20px gray",
         }}
       >
-        <Card.Img variant="top" src={`../${img}`} alt={name} />
+        <Card.Img variant="top" src={`../${product.img}`} alt={name} />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <Card.Title>{product.name}</Card.Title>
+          <Card.Text>{product.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item>Precio: ${price}</ListGroup.Item>
-          <ListGroup.Item>Stock disponible: {stock}</ListGroup.Item>
+          <ListGroup.Item>Precio: ${product.price}</ListGroup.Item>
+          <ListGroup.Item>Stock disponible: {product.stock}</ListGroup.Item>
         </ListGroup>
 
         <div className="itemCountContainer">
@@ -50,7 +51,7 @@ export default function ItemDetail({ img, name, description, price, stock }) {
               </Button>{" "}
             </div>
           ) : (
-            <ItemCount stock={stock} onAdd={handleOnAdd} />
+            <ItemCount stock={product.stock} onAdd={handleOnAdd} />
           )}
         </div>
       </Card>

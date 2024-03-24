@@ -7,12 +7,11 @@ export default function ItemCount({ stock, onAdd }) {
   let [cont, setCont] = useState(1);
 
   const handleClickSuma = (stock) => {
-    cont < stock ? setCont(cont + 1) : setCont(stock);
+    cont < stock && setCont(cont + 1);
   };
   const handleClickResta = () => {
-    cont > 1 ? setCont(cont - 1) : (cont = 1);
+    cont > 1 && setCont(cont - 1);
   };
-  
 
   return (
     <>
@@ -23,7 +22,11 @@ export default function ItemCount({ stock, onAdd }) {
 
           <button onClick={() => handleClickSuma(stock)}>+</button>
         </div>
-        <Button variant="primary" className="btnAgregar" onClick={()=>onAdd(cont)}>
+        <Button
+          variant="primary"
+          className="btnAgregar"
+          onClick={() => onAdd(cont)}
+        >
           Agregar al carrito
         </Button>
       </div>
