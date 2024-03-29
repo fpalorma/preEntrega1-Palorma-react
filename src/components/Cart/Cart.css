@@ -1,0 +1,22 @@
+.contenedorGeneralCart,
+.cartCard {
+    margin-left: 20px;
+}
+
+
+
+.cartTitle {
+    margin-block: 2rem;
+}
+
+.btnVaciar {
+    color: white;
+    margin-block: .7rem;
+    border-radius: 8px;
+}
+
+.productContainer {
+    background-color: blanchedalmond;
+    margin: 5px 0px 0px -20px;
+    padding: 5px 2px 0px 2px;
+}

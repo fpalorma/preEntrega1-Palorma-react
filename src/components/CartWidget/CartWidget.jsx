@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 function CartWidget() {
   let estiloCarrito = {
@@ -9,6 +11,8 @@ function CartWidget() {
     cursor: "pointer",
     textDecoration: "none",
   };
+  const { cantidadEnCarrito } = useContext(CartContext);
+
   return (
     <>
       <button style={estiloCarrito}>
@@ -19,7 +23,7 @@ function CartWidget() {
         </Link>
       </button>
 
-      <p>0</p>
+      <p>{cantidadEnCarrito}</p>
     </>
   );
 }

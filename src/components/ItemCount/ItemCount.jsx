@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./ItemCount.css";
 import Button from "react-bootstrap/Button";
 
-export default function ItemCount({ stock, onAdd }) {
+export default function ItemCount({ stock, onAdd, disabled }) {
   let [cont, setCont] = useState(1);
 
   const handleClickSuma = (stock) => {
@@ -24,7 +24,8 @@ export default function ItemCount({ stock, onAdd }) {
         </div>
         <Button
           variant="primary"
-          className="btnAgregar"
+          className="btnAgregar" 
+          disabled={disabled}
           onClick={() => onAdd(cont)}
         >
           Agregar al carrito
