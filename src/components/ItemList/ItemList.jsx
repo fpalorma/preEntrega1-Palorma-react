@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getProducts, getProductsByCategory } from "../../asyncMock.js";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 
 function ItemList() {
   const [products, setProducts] = useState([]);
@@ -17,11 +18,20 @@ function ItemList() {
 
   return (
     <>
-      <div className="itemsContainer">
-        {products.map((producto) => (
-          <Item key={producto.id} producto={producto}></Item>
-        ))}
-      </div>
+      {products.length > 0 ? (
+        <div className="itemsContainer">
+          {products.map((producto) => (
+            <Item key={producto.id} producto={producto}></Item>
+          ))}
+        </div>
+      ) : (
+        <Spinner
+          animation="border"
+          variant="warning"
+          className="spinner"
+          style={{ marginLeft: "50%" }}
+        />
+      )}
     </>
   );
 }
