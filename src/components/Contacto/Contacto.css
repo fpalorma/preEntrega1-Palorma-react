@@ -1,0 +1,33 @@
+h1,
+.formulario {
+    margin: 5px 0 0 20px;
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: medium;
+    gap: 0.1rem;
+    margin: 5px 0 5px 0;
+
+}
+
+input,
+textarea {
+    padding: .5rem;
+    border-radius: 8px;
+    min-width: 200px;
+
+}
+
+.formulario button {
+    color: white;
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+    background-color: peru;
+    color: white;
+}
