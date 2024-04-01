@@ -1,5 +1,5 @@
 import ItemDetail from "../ItemDetail/ItemDetail.jsx";
-import { getProductDetail } from "../../asyncMock.js";
+import { getProductDetail } from "../../firebase/firebase.js";
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemDetailContainer.css";
