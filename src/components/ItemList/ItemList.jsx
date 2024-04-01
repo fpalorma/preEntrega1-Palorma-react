@@ -1,9 +1,9 @@
 import Item from "../Item/Item.jsx";
 import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory } from "../../asyncMock.js";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
+import { getProducts, getProductsByCategory } from "../../firebase/firebase.js";
 
 function ItemList() {
   const [products, setProducts] = useState([]);
