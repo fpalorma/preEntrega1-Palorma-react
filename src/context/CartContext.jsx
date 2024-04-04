@@ -18,6 +18,10 @@ export function CartProvider({ children }) {
     0
   );
 
+  const deleteProduct = (id)=>{
+    setCarrito(carrito.filter(prod=>prod.id != id))
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -26,6 +30,7 @@ export function CartProvider({ children }) {
         cantidadEnCarrito,
         vaciarCarrito,
         precioTotal,
+        deleteProduct
       }}
     >
       {children}

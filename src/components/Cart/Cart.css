@@ -19,4 +19,14 @@
     background-color: blanchedalmond;
     margin: 5px 0px 0px -20px;
     padding: 5px 2px 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btnDeleteContainer {
+    position: absolute;
+    right: 5%;
+
 }
