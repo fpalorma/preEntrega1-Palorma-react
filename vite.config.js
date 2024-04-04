@@ -5,8 +5,4 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   publicDir: "src/assets",
-  define: {
-  
-    VITE_FIREBASE_CONFIG: import.meta.env.VITE_FIREBASE_CONFIG,
-  },
 })

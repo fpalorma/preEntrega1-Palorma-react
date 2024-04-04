@@ -12,7 +12,7 @@ export default function Home() {
             <h3 className="carouselText">mi-Café - Tienda del barista</h3>
             <p className="carouselText">
               Somos importadores y tostadores de café de especialidad.{" "}
-              {<br></br>}Pedí tu variedad favorita y te la llevamos a tu casa.
+              {<br></br>}Descubrí tu variedad favorita.
             </p>
             <button>
               <Link to={"category/café"} className="carouselLinks"> Ver cafés</Link>
