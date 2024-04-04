@@ -5,14 +5,7 @@ import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyCcMohRAOhOW7lLwtKJocfGY3gVFB3Qh74",
-    authDomain: "mi-cafe-2358f.firebaseapp.com",
-    projectId: "mi-cafe-2358f",
-    storageBucket: "mi-cafe-2358f.appspot.com",
-    messagingSenderId: "937312758271",
-    appId: "1:937312758271:web:5de31ca2a326bcce699fca"
-};
+const firebaseConfig = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG)
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
