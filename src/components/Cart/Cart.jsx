@@ -21,28 +21,30 @@ export default function Cart() {
         ) : (
           <>
             {" "}
-            <div className="productContainer">
+            <div>
               {carrito.map((prod) => (
                 <>
-                  <div>
-                    <h2 key={prod.id} className="cartCard">
-                      {prod.name}
-                    </h2>
-                    <p className="cartCard">Cantidad: {prod.quantity}</p>
-                    <p className="cartCard">
-                      Precio final: ${prod.price * prod.quantity}
-                    </p>
-                  </div>
-                  <div className="btnDeleteContainer">
-                    <Button
-                      style={{ backgroundColor: "red", border: "none" }}
-                      onClick={() => handleDelete(prod.id)}
-                    >
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
+                  <div className="productContainer">
+                    <div>
+                      <h2 key={prod.id} className="cartCard">
+                        {prod.name}
+                      </h2>
+                      <p className="cartCard">Cantidad: {prod.quantity}</p>
+                      <p className="cartCard">
+                        Precio final: ${prod.price * prod.quantity}
+                      </p>
+                    </div>
+                    <div className="btnDeleteContainer">
+                      <Button
+                        style={{ backgroundColor: "red", border: "none" }}
+                        onClick={() => handleDelete(prod.id)}
+                      >
+                        <i className="bi bi-trash"></i>
+                      </Button>
+                    </div>
 
-                  <hr></hr>
+                    <hr></hr>
+                  </div>
                 </>
               ))}
             </div>
