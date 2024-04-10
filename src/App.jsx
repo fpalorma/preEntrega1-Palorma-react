@@ -7,6 +7,7 @@ import Home from "./components/Home/Home.jsx";
 import Contact from "./components/Contacto/Contacto.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
+import Checkout from "./components/Checkout/Checkout.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/checkout" element={<Checkout />} />
             <Route
               exact
               path="/products"

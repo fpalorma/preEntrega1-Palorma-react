@@ -13,6 +13,7 @@
     color: white;
     margin-block: .7rem;
     border-radius: 8px;
+    height: 2.5rem;
 }
 
 .productContainer {
@@ -30,4 +31,13 @@
     position: absolute;
     right: 5%;
 
+}
+
+.cart-btn-container{
+    display: flex;
+    align-items:    last baseline;
+    justify-content: space-between;
+}
+.btn-checkout{
+    margin-right: 40px;
 }
