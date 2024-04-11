@@ -1,5 +1,5 @@
 import { CartContext } from "../../context/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ export default function Checkout() {
     useContext(CartContext);
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+  const [isProcesing, setProcesing] = useState(false)
   const productosPedidos = carrito.map((prod) => {
     return {
       id: prod.id,
@@ -21,6 +22,7 @@ export default function Checkout() {
   });
 
   const enviar = async (data) => {
+    setProcesing(true)
     const date = new Date();
     const pedido = {
       buyer: {
@@ -46,6 +48,7 @@ export default function Checkout() {
       if (result.isConfirmed) {
         navigate("/");
         vaciarCarrito();
+        setProcesing(false)
       }
     });
   };
@@ -100,7 +103,8 @@ export default function Checkout() {
             </label>
           </div>
           <div>
-            <button type="submit">Finalizar compra</button>
+            {isProcesing?<button disabled>Procesando...</button>:<button type="submit">Finalizar compra</button>}
+            
           </div>
         </form>
       </div>
