@@ -1,5 +1,6 @@
 .nav {
     background-color: peru;
+    max-width: 100%;
 }
 
 .contenedorCarrito {
@@ -8,8 +9,7 @@
     align-items: baseline;
     color: white;
     text-decoration: none;
-    margin-right: 40px;
-    margin-left: 10px
+    
 }
 
 #basic-nav-dropdown {

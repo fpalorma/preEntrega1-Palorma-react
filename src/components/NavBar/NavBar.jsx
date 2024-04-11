@@ -49,11 +49,11 @@ export default function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
       <div className="contenedorCarrito">
         <CartWidget />
       </div>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }
