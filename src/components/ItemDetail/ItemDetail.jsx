@@ -19,7 +19,7 @@ export default function ItemDetail({ product }) {
     const productoAgregado = {
       ...product,
       quantity,
-      // stock: product.stock - quantity,
+    
     };
     let newCart = [...carrito];
     const isInCart = newCart.find((prod) => prod.id === productoAgregado.id);
@@ -126,11 +126,15 @@ export default function ItemDetail({ product }) {
           </ListGroup>
 
           <div className="itemCountContainer">
-            <ItemCount
+            {quantityAdded>0?<ItemCount
+              stock={product.quantity}
+              onAdd={handleOnAdd}
+              disabled={product.stock == 0}
+            />:<ItemCount
               stock={product.stock}
               onAdd={handleOnAdd}
               disabled={product.stock == 0}
-            />
+            />}
           </div>
         </Card>
       )}

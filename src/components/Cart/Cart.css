@@ -28,7 +28,7 @@
 }
 
 .btnDeleteContainer {
-    position: absolute;
+    /* position: absolute; */
     right: 5%;
 
 }
@@ -40,4 +40,19 @@
 }
 .btn-checkout{
     margin-right: 40px;
+}
+
+.btnsContainer{
+    display:flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnsContainer Button{
+    max-width: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
