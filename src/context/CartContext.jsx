@@ -18,9 +18,26 @@ export function CartProvider({ children }) {
     0
   );
 
-  const deleteProduct = (id)=>{
-    setCarrito(carrito.filter(prod=>prod.id != id))
-  }
+  const deleteProduct = (id) => {
+    setCarrito(carrito.filter((prod) => prod.id != id));
+  };
+
+  const restarProduct = (id, quantity) => {
+    
+      const updatedData = carrito.map(obj =>
+        obj.id === id ? { ...obj, quantity: quantity-1 } : obj
+      );
+      setCarrito(updatedData);
+    
+  };
+  const sumarProduct = (id, quantity) => {
+    
+    const updatedData = carrito.map(obj =>
+      obj.id === id ? { ...obj, quantity: quantity+1 } : obj
+    );
+    setCarrito(updatedData);
+  
+};
 
   return (
     <CartContext.Provider
@@ -30,7 +47,9 @@ export function CartProvider({ children }) {
         cantidadEnCarrito,
         vaciarCarrito,
         precioTotal,
-        deleteProduct
+        deleteProduct,
+        restarProduct,
+        sumarProduct
       }}
     >
       {children}
