@@ -86,7 +86,7 @@ export default function Checkout() {
             <label>
               Teléfono:
               <input
-                type="phone"
+                type="number" pattern="[0-9]*" inputMode="numeric"
                 placeholder="Introduce tu teléfono"
                 required
                 {...register("phone")}
