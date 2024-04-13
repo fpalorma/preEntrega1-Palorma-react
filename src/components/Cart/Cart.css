@@ -50,9 +50,16 @@
 }
 
 .btnsContainer Button{
-    max-width: 20px;
+    max-width: 40px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.btnTodosContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    margin-right: 20px;
 }

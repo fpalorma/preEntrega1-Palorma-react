@@ -4,8 +4,14 @@ import "./Cart.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 export default function Cart() {
-  const { carrito, vaciarCarrito, precioTotal, deleteProduct, restarProduct, sumarProduct } =
-    useContext(CartContext);
+  const {
+    carrito,
+    vaciarCarrito,
+    precioTotal,
+    deleteProduct,
+    restarProduct,
+    sumarProduct,
+  } = useContext(CartContext);
   const handleVaciar = () => {
     vaciarCarrito();
   };
@@ -14,12 +20,12 @@ export default function Cart() {
     deleteProduct(id);
   };
 
-  const handleRestarProd = (id,quantity) =>{
-    quantity>1 ? restarProduct(id, quantity):deleteProduct(id)
-  }
-  const handleSumarProd = (id,quantity, stock) =>{
-    stock > quantity && sumarProduct(id,quantity)
-  }
+  const handleRestarProd = (id, quantity) => {
+    quantity > 1 ? restarProduct(id, quantity) : deleteProduct(id);
+  };
+  const handleSumarProd = (id, quantity, stock) => {
+    stock > quantity && sumarProduct(id, quantity);
+  };
   return (
     <>
       <section className="contenedorGeneralCart">
@@ -41,22 +47,26 @@ export default function Cart() {
                         Precio final: ${prod.price * prod.quantity}
                       </p>
                     </div>
+                    <div className="btnTodosContainer">
                     <div className="btnsContainer">
-
-                    <div className="btnRestarContainer">
-                      <Button
-                        onClick={() => handleRestarProd(prod.id, prod.quantity)}
-                      >
-                        -
-                      </Button>
-                    </div>
-                    <div className="btnSumarContainer">
-                      <Button
-                      onClick={() => handleSumarProd(prod.id, prod.quantity, prod.stock)}
-                      >
-                        +
-                      </Button>
-                    </div>
+                      <div className="btnRestarContainer">
+                        <Button
+                          onClick={() =>
+                            handleRestarProd(prod.id, prod.quantity)
+                          }
+                        >
+                          -
+                        </Button>
+                      </div>
+                      <div className="btnSumarContainer">
+                        <Button
+                          onClick={() =>
+                            handleSumarProd(prod.id, prod.quantity, prod.stock)
+                          }
+                        >
+                          +
+                        </Button>
+                      </div>
                     </div>
                     <div className="btnDeleteContainer">
                       <Button
@@ -69,6 +79,7 @@ export default function Cart() {
 
                     <hr></hr>
                   </div>
+                    </div>
                 </>
               ))}
             </div>
