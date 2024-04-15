@@ -16,6 +16,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
+          <Route path='*' element={<h1> Esta página no existe... </h1>} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/cart" element={<Cart />} />
